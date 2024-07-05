@@ -7,55 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naruto: A Journey of Ninja</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8730119213752588" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to right, #f2f2f2, #e0e0e0);
-      color: #000000;
-      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to right, #000000, #000000); /* Very dark background */
+      color: #ffffff;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Applied Poppins font */
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       transition: background 0.3s, color 0.3s;
     }
     .dark-mode {
-      background: linear-gradient(to right, #2c2c2c, #1a1a1a);
-      color: #cccccc;
+      background: linear-gradient(to right, #000000, #000000); /* Very dark background */
+      color: #ffffff;
     }
     .dark-mode main {
-      background: linear-gradient(to right, #333333, #2c2c2c);
+      background: linear-gradient(to right, #1a1a1a, #000000); /* Darker blocks */
       box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
     }
     .dark-mode h1 {
-      color: #f2f2f2;
+      color: #ffffff;
     }
     
     h1 {
-      color: #1a1a1a;
-      font-weight: bold;
+      color: #ffffff;
+      font-weight: 600;
       text-align: center;
       margin-top: 20px;
       font-size: 2.5em;
       transition: color 0.3s;
     }
     h2 {
-      color: #4d4d4d;
+      color: #ffffff;
       font-size: 1.8em;
       transition: color 0.3s;
     }
-    .dark-mode h2 {
-      color: #cccccc;
-    }
     p {
-      color: #666666;
+      color: #ffffff;
       line-height: 1.6;
       margin-bottom: 20px;
       transition: color 0.3s;
     }
-    .dark-mode p {
-      color: #b3b3b3;
-    }
     img {
-  	height: auto;
+      height: auto;
       width: 100%;
       display: block;
       margin: 20px auto;
@@ -66,58 +63,26 @@
     header, section, footer {
       margin: 20px;
       padding: 20px;
-      background-color: #ffffff;
+      background-color: #1a1a1a;
       border-radius: 10px;
+      border: 1px solid #666666;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s, color 0.3s;
-    }
-    .dark-mode header,
-    .dark-mode section,
-    .dark-mode footer {
-      background-color: #333333;
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-    }
-    header {
-      text-align: center;
     }
     footer {
       text-align: center;
       font-size: 0.9em;
-      color: #999999;
+      color: #ffffff;
       transition: color 0.3s;
     }
-    .dark-mode footer {
-      color: #cccccc;
-    }
     footer a {
-      color: #666666;
+      color: #ffffff;
       text-decoration: none;
       margin: 0 10px;
       transition: color 0.3s;
     }
-    .dark-mode footer a {
-      color: #cccccc;
-    }
     footer a:hover {
       text-decoration: underline;
-    }
-    .mode-switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: #ffffff;
-      color: #333333;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    .dark-mode .mode-switch {
-      background-color: #333333;
-      color: #ffffff;
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
     }
     @media (max-width: 768px) {
       h1 {
@@ -130,21 +95,20 @@
         margin: 10px;
         padding: 15px;
       }
-      .mode-switch {
-        top: 10px;
-        right: 10px;
-        padding: 8px 16px;
-      }
+    }
+    .author {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 10px 0;
     }
   </style>
 </head>
-<body>
-	<button class="mode-switch" onclick="toggleMode()">Switch to Dark Mode</button>
+<body class="dark-mode">
   <main>
     <article>
       <header>
         <h1>Naruto: A Journey of Ninja</h1>
-        <p>By Milan Bhandari</p>
+        <p class="author">Author: Milan Bhandari</p>
       </header>
       
       <section>
@@ -195,17 +159,5 @@
       </footer>
     </article>
   </main>
-  <script>
-    function toggleMode() {
-      const body = document.body;
-      body.classList.toggle('dark-mode');
-      const modeSwitchButton = document.querySelector('.mode-switch');
-      if (body.classList.contains('dark-mode')) {
-        modeSwitchButton.textContent = 'Switch to Light Mode';
-      } else {
-        modeSwitchButton.textContent = 'Switch to Dark Mode';
-      }
-    }
-  </script>
 </body>
 </html>
