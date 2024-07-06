@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./assets/images/mlogo.jpg" type="image/jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Programming Language: An Overview</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8730119213752588" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #000000); /* Very dark background */
+      color: #ffffff; /* White text for dark mode */
+      font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Applied Poppins font */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: linear-gradient(to right, #000000, #000000); /* Very dark background */
+      color: #ffffff;
+    }
+    .dark-mode main {
+      background: linear-gradient(to right, #1a1a1a, #000000); /* Darker blocks */
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    .dark-mode h1 {
+      color: #ffffff;
+    }
+    
+    h1 {
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2.5em;
+      transition: color 0.3s;
+    }
+    h2 {
+      color: #ffffff;
+      font-size: 1.8em;
+      transition: color 0.3s;
+    }
+    p {
+      color: #ffffff;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+    ul {
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+    }
+    header, section, footer {
+      margin: 20px;
+      padding: 20px;
+      background-color: #1a1a1a; /* Darker block background */
+      border-radius: 10px;
+      border: 1px solid #666666; /* Gray border */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ffffff; /* White text in footer */
+      transition: color 0.3s;
+    }
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      header, section, footer {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+    .author {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <main>
+    <article>
+      <header>
+        <h1>C Programming Language: An Overview</h1>
+        <p class="author">Author: Milan Bhandari</p>
+      </header>
+      
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          C is a high-level programming language that was developed by Dennis Ritchie between 1969 and 1973 at Bell Labs. It is widely used for system programming and embedded systems due to its efficiency and control. C is known for its powerful features and flexibility, allowing programmers to write complex programs while maintaining performance.
+        </p>
+      </section>
+      
+      <section>
+        <h2>History</h2>
+        <p>
+          The C language was developed as an evolution of the B language, which itself was derived from BCPL. It was designed to be compiled using a relatively straightforward compiler, which made it a popular choice for developing operating systems and other critical software. The language has undergone several revisions, with the most significant being ANSI C and ISO C standards.
+        </p>
+        <img src="./assets/images/dennis.png" width="600" height="400">
+      </section>
+
+      <section>
+        <h2>Features</h2>
+        <p>
+          C programming language offers several features, including:
+        </p>
+        <ul>
+          <li><strong>Low-Level Access:</strong> C provides low-level access to memory through pointers, making it suitable for system-level programming.</li>
+          <li><strong>Portability:</strong> C programs can be compiled and run on different platforms with minimal changes.</li>
+          <li><strong>Efficiency:</strong> C is known for its performance efficiency and speed, making it a popular choice for applications requiring high performance.</li>
+          <li><strong>Modularity:</strong> The language supports functions, which helps in organizing code into modular units.</li>
+          <li><strong>Rich Library:</strong> C has a rich set of standard libraries that provide a wide range of functions for various tasks.</li>
+          <li><strong>Structured Programming:</strong> C promotes structured programming through the use of functions, loops, and conditional statements.</li>
+        </ul>
+        <img src="./assets/images/c-lang-features.png" alt="C Programming Features" width="600" height="400">
+      </section>
+
+      <section>
+        <h2>Syntax and Structure</h2>
+        <p>
+          C syntax is concise and provides a rich set of operators and control structures. Here are some key elements of C syntax:
+        </p>
+        <ul>
+          <li><strong>Variables and Data Types:</strong> C supports various data types such as int, float, char, and double. Variables must be declared before use.</li>
+          <li><strong>Control Structures:</strong> C includes control structures like if, else, switch, for, while, and do-while to manage the flow of the program.</li>
+          <li><strong>Functions:</strong> Functions are a fundamental part of C. They allow code to be organized into reusable blocks.</li>
+          <li><strong>Pointers:</strong> Pointers in C are variables that store memory addresses. They provide low-level memory manipulation capabilities.</li>
+        </ul>
+        <img src="./assets/images/syntax.png" alt="C Programming Syntax" width="600" height="400">
+      </section>
+      
+      <section>
+        <h2>Applications</h2>
+        <p>
+          C is extensively used in various domains, including:
+        </p>
+        <ul>
+          <li><strong>Operating Systems:</strong> The majority of operating systems, including Unix and Linux, are written in C.</li>
+          <li><strong>Embedded Systems:</strong> C is used for programming microcontrollers and embedded systems due to its efficiency and low-level capabilities.</li>
+          <li><strong>Game Development:</strong> Many games and game engines use C for its performance and control over system resources.</li>
+          <li><strong>Database Systems:</strong> Popular database management systems like MySQL and Oracle are written in C.</li>
+          <li><strong>Compilers:</strong> C is often used to write compilers for other programming languages.</li>
+          <li><strong>Networking:</strong> C is used in developing network protocols and communication systems.</li>
+        </ul>
+        <img src="./assets/images/applications.png" alt="Applications of C Programming" width="600" height="400">
+      </section>
+      
+      <section>
+        <h2>Advantages</h2>
+        <p>
+          C programming offers several advantages:
+        </p>
+        <ul>
+          <li><strong>Performance:</strong> C provides excellent performance due to its close-to-metal programming capabilities.</li>
+          <li><strong>Control:</strong> It offers fine-grained control over system resources and memory.</li>
+          <li><strong>Portability:</strong> C programs can be compiled and executed on different hardware platforms with minimal modifications, thanks to its standardized nature.</li>
+          <li><strong>Extensive Use:</strong> The language's extensive use in legacy systems and modern applications means there's a large pool of resources and libraries available.</li>
+          <li><strong>Community and Support:</strong> C has a vast community and extensive documentation, making it easier to find solutions to problems and learn the language.</li>
+        </ul>
+        <img src="./assets/images/c-advantages.jpg" alt="Advantages of C Programming" width="600" height="400">
+      </section>
+      
+      <section>
+        <h2>Challenges</h2>
+        <p>
+          Despite its strengths, C programming comes with its own set of challenges:
+        </p>
+        <ul>
+          <li><strong>Memory Management:</strong> C requires explicit memory management, which can lead to issues such as memory leaks and pointer errors if not handled properly.</li>
+          <li><strong>Complex Syntax:</strong> The syntax of C can be complex and difficult for beginners to master, particularly when dealing with pointers and memory allocation.</li>
+          <li><strong>Lack of Modern Features:</strong> Compared to modern languages, C lacks some built-in features and abstractions that facilitate easier and safer programming.</li>
+          <li><strong>Error Handling:</strong> C does not have built-in error handling mechanisms like exceptions, which can make it harder to manage errors in larger programs.</li>
+        </ul>
+        <img src="./assets/images/c-challenge.png" alt="Challenges of C Programming" width="600" height="400">
+      </section>
+      
+      <section>
+        <h2>Learning Resources</h2>
+        <p>
+          For those interested in learning C programming, here are some recommended resources:
+        </p>
+        <ul>
+          <li><strong>Books:</strong> "The C Programming Language" by Brian W. Kernighan and Dennis M. Ritchie is a classic reference. "C Programming: A Modern Approach" by K. N. King is another comprehensive guide.</li>
+          <li><strong>Online Tutorials:</strong> Websites like Codecademy, Coursera, and Udacity offer interactive C programming courses and tutorials.</li>
+          <li><strong>Forums and Communities:</strong> Engage with communities on platforms like Stack Overflow and Reddit to ask questions and share knowledge.</li>
+          <li><strong>Practice Platforms:</strong> Websites like LeetCode, HackerRank, and CodeSignal provide coding challenges and exercises to practice C programming.</li>
+        </ul>
+        <img src="./assets/images/c-lang-resources.jpg" alt="Learning Resources for C Programming" width="600" height="400">
+      </section>
+      
+      <section>
+        <h2>Conclusion</h2>
+        <p>
+          C remains one of the most influential programming languages, serving as the foundation for many modern languages and systems. Its combination of performance, efficiency, and portability makes it a valuable tool for programmers. Understanding C not only opens doors to system-level programming but also provides a strong base for learning other programming languages and concepts.
+        </p>
+      </section>
+      
+      <footer>
+        <p>Posted on July 6, 2024</p>
+        <p>
+          <a href="https://www.milan-bhandari.com.np/a-journey-of-ninja.html">&laquo; Previous Post</a> | 
+          <a href="#">Next Post &raquo;</a>
+        </p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
