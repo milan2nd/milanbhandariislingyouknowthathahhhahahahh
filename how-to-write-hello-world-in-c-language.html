@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./assets/images/mlogo.jpg" type="image/jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Write "Hello, World!" in C Language</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8730119213752588" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #000000); 
+      color: #ffffff; 
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: linear-gradient(to right, #000000, #000000);
+      color: #ffffff;
+    }
+    .dark-mode main {
+      background: linear-gradient(to right, #1a1a1a, #000000);
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    .dark-mode h1 {
+      color: #ffffff;
+    }
+    
+    h1 {
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+    h2 {
+      color: #ffffff;
+      font-size: 1.8em;
+      transition: color 0.3s;
+    }
+    p {
+      color: #ffffff;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+    p a {
+      color: #ffffff;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+    pre {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+    }
+    header, section, footer {
+      margin: 20px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      border: 1px solid #666666;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ffffff; 
+      transition: color 0.3s;
+    }
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      header, section, footer {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+    .author {
+      text-align: center;
+      font-size: 15px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <main>
+    <article>
+      <header>
+        <h1>How to Write "Hello, World!" in C Language</h1>
+        <p class="author">Author: Milan Bhandari</p>
+      </header>
+      
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          Learning to code can be both exciting and overwhelming. One of the first programs that every beginner writes is the "Hello, World!" program. It might seem simple, but it's a crucial step in understanding how a programming language works. In this guide, we'll walk through writing this classic program in the C programming language.
+        </p>
+        <img src="https://i.postimg.cc/SxBTPy4D/IMG-20240804-011647.jpg" alt="Hello World on a computer screen" width="600" height="400">
+        
+        <h2>Prerequisites</h2>
+        <p>
+          Before we begin, make sure you have a C compiler installed on your computer. For Windows users, <a href="https://sourceforge.net/projects/mingw/">MinGW</a> is a great option. If you are on macOS, you can install Xcode Command Line Tools. For Linux users, GCC is usually pre-installed, but you can install it using your package manager if necessary.
+        </p>
+        
+        <h2>Writing the Code</h2>
+        <p>
+          Open your preferred text editor or IDE, and enter the following code:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Print "Hello, World!" to the console
+    printf("Hello, World!\n");
+    return 0;
+}
+        </pre>
+        
+        <h2>Understanding the Code</h2>
+        <p>
+          Let's break down what each part of the code does:
+        </p>
+        <ul>
+          <li><code>#include &lt;stdio.h&gt;</code>: This line tells the compiler to include the standard input-output library, which contains the <code>printf</code> function used to output text.</li>
+          <li><code>int main()</code>: This defines the main function, which is the starting point of any C program. Every C program must have a <code>main</code> function.</li>
+          <li><code>printf("Hello, World!\n");</code>: This function call outputs the text "Hello, World!" to the console. The <code>\n</code> is a newline character, which moves the cursor to the next line.</li>
+          <li><code>return 0;</code>: This statement ends the <code>main</code> function and returns 0 to the operating system, signaling that the program executed successfully.</li>
+        </ul>
+        
+        <h2>Compiling and Running Your Program</h2>
+        <p>
+          Save the file with a <code>.c</code> extension, for example, <code>hello.c</code>. To compile the program, open your terminal or command prompt, navigate to the directory where your file is saved, and run the following command:
+        </p>
+        <pre>
+gcc hello.c -o hello
+        </pre>
+        <p>
+          This command compiles <code>hello.c</code> and generates an executable file named <code>hello</code>. To execute the program, use the command:
+        </p>
+        <pre>
+./hello
+        </pre>
+        <p>
+          You should see the message <code>Hello, World!</code> displayed on the console. Congratulations, you've just written and executed your first C program!
+        </p>
+        
+        <h2>Comments in C Code</h2>
+        <p>
+          Comments are an essential part of coding. They help explain what the code does, making it easier for others (and yourself) to understand and maintain. In C, comments are added using <code>//</code> for single-line comments and <code>/* ... */</code> for multi-line comments. For instance:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    // This is a single-line comment
+    printf("Hello, World!\n");
+    /* This is a 
+       multi-line comment */
+    return 0;
+}
+        </pre>
+        <p>
+          Comments are a great way to document your thought process and make your code more readable. As you write more complex programs, you'll find them invaluable.
+        </p>
+        
+        <h2>Conclusion</h2>
+        <p>
+          Writing a "Hello, World!" program might seem trivial, but it's an important step in learning any programming language. It helps you get familiar with the basic syntax and the process of compiling and running code. Keep experimenting and building on this foundation, and you'll soon be able to tackle more complex projects. Happy coding!
+        </p>
+      </section>
+      
+      <footer>
+        <p>Posted on August 4, 2024</p>
+        <p>
+          <a href="why-did-ubayashiki-let-his-daughters-die-in-demon-slayer.html">&laquo; Previous Post</a> | 
+          <a href="next-post.html">Next Post &raquo;</a>
+        </p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
