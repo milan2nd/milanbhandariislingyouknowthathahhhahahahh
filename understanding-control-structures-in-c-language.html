@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./assets/images/mlogo.jpg" type="image/jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Control Structures in C Language</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8730119213752588" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #000000); 
+      color: #ffffff; 
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: linear-gradient(to right, #000000, #000000);
+      color: #ffffff;
+    }
+    .dark-mode main {
+      background: linear-gradient(to right, #1a1a1a, #000000);
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    .dark-mode h1 {
+      color: #ffffff;
+    }
+    
+    h1 {
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+    h2 {
+      color: #ffffff;
+      font-size: 1.8em;
+      transition: color 0.3s;
+    }
+    p {
+      color: #ffffff;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+    pre {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+    }
+    header, section, footer {
+      margin: 20px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      border: 1px solid #666666;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #ffffff; 
+      transition: color 0.3s;
+    }
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      header, section, footer {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+    .author {
+      text-align: center;
+      font-size: 15px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <main>
+    <article>
+      <header>
+        <h1>Understanding Control Structures in C Language</h1>
+        <p class="author">Author: Milan Bhandari</p>
+      </header>
+      
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          With a solid understanding of variables and data types, you're ready to tackle control structures in C. Control structures are essential for directing the flow of execution in your programs. In this post, we'll explore conditional statements and loops, two key control structures in C programming.
+        </p>
+        <img src="./assets/images/structure.png" alt="Structure types" width="600" height="400">
+        
+        <h2>Conditional Statements</h2>
+        <p>
+          Conditional statements allow your program to make decisions based on certain conditions. The most common conditional statements in C are <code>if</code>, <code>if-else</code>, and <code>switch</code>. Here’s how they work:
+        </p>
+        
+        <h3>1. The <code>if</code> Statement</h3>
+        <p>
+          The <code>if</code> statement executes a block of code if a specified condition is true. Here’s an example:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 10;
+
+    if (number > 5) {
+        printf("Number is greater than 5.\n");
+    }
+
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre>Number is greater than 5.</pre>
+        
+        <h3>2. The <code>if-else</code> Statement</h3>
+        <p>
+          The <code>if-else</code> statement allows you to execute one block of code if a condition is true and another block if the condition is false. Here’s an example:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 3;
+
+    if (number % 2 == 0) {
+        printf("Number is even.\n");
+    } else {
+        printf("Number is odd.\n");
+    }
+
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre>Number is odd.</pre>
+        
+        <h3>3. The <code>switch</code> Statement</h3>
+        <p>
+          The <code>switch</code> statement is used when you have multiple conditions to check. It’s more efficient than using multiple <code>if-else</code> statements for many conditions. Here’s an example:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int day = 3;
+
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        default:
+            printf("Invalid day\n");
+            break;
+    }
+
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre>Wednesday</pre>
+
+        <h2>Additional Examples</h2>
+        
+        <h3>1. Finding Discount Based on Purchase Amount</h3>
+        <p>
+          Here’s how you might use an <code>if-else</code> statement to calculate a discount based on the amount spent:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    float amountSpent = 150.0;
+    float discount;
+
+    if (amountSpent >= 100) {
+        discount = amountSpent * 0.1;
+        printf("Discount applied: $%.2f\n", discount);
+    } else {
+        discount = 0;
+        printf("No discount applied.\n");
+    }
+
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre>Discount applied: $15.00</pre>
+        
+        <h3>2. Checking for Positive and Negative Numbers</h3>
+        <p>
+          This example uses an <code>if-else</code> statement to determine if a number is positive or negative:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int number = -7;
+
+    if (number > 0) {
+        printf("Number is positive.\n");
+    } else if (number < 0) {
+        printf("Number is negative.\n");
+    } else {
+        printf("Number is zero.\n");
+    }
+
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre>Number is negative.</pre>
+
+        <h3>3. Checking for Prime Numbers</h3>
+        <p>
+          Here’s how you might use nested loops and <code>if-else</code> statements to determine if a number is prime:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num = 29;
+    int isPrime = 1;
+
+    for (int i = 2; i <= num / 2; ++i) {
+        if (num % i == 0) {
+            isPrime = 0;
+            break;
+        }
+    }
+
+    if (isPrime == 1) {
+        printf("%d is a prime number.\n", num);
+    } else {
+        printf("%d is not a prime number.\n", num);
+    }
+
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre>29 is a prime number.</pre>
+        
+        <h3>4. Checking for Consonants in a String</h3>
+        <p>
+          Here’s an example of using a <code>switch</code> statement within a loop to check if characters in a string are consonants:
+        </p>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    char str[] = "Hello World";
+    char ch;
+    
+    for (int i = 0; str[i] != '\0'; ++i) {
+        ch = str[i];
+        ch = tolower(ch);
+        
+        switch (ch) {
+            case 'b': case 'c': case 'd': case 'f': case 'g': 
+            case 'h': case 'j': case 'k': case 'l': case 'm': 
+            case 'n': case 'p': case 'q': case 'r': case 's': 
+            case 't': case 'v': case 'w': case 'x': case 'y': 
+            case 'z':
+                printf("%c is a consonant.\n", ch);
+                break;
+            default:
+                // Ignore vowels and non-alphabetical characters
+                break;
+        }
+    }
+
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre>
+H is a consonant.
+l is a consonant.
+l is a consonant.
+W is a consonant.
+r is a consonant.
+l is a consonant.
+d is a consonant.
+        </pre>
+
+        <h2>Conclusion</h2>
+        <p>
+          Mastering control structures is essential for programming in C. Conditional statements and loops give you the power to make decisions and repeat actions efficiently. With these tools, you can handle a wide variety of tasks, from simple decision-making to complex iterations and calculations.
+        </p>
+        <p>
+          Experiment with these examples and modify them to fit your own needs. In the next post, we will dive into functions, which will allow you to modularize your code and make it more reusable and organized. Stay tuned for more on this journey to becoming a proficient C programmer!
+        </p>
+      </section>
+      
+      <footer>
+        <p>Posted on August 17, 2024</p>
+        <p>
+          <a href="variables-and-basic-data-types-in-c-language.html">&laquo; Previous Post</a> | 
+          <a href="#">Next Post &raquo;</a>
+        </p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
